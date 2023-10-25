@@ -5,9 +5,6 @@
 // let email
 // let department 
 // let submit
-// let output
-
-
 
 // HELPER FUNCTION TO RETURN DOM ELEMENT
 const $ = (id) => document.getElementById(id)
@@ -19,22 +16,12 @@ let ext         = $('ext')
 let email       = $('email')
 let department  = $('department')
 let submit      = $('submit')
-let output      = $('output')
 
-// function addEmp() {
-//     console.log (`ID: ${empid}`)
-//     console.log (`Name: ${name}`)
-//     console.log (`Extension: ${ext}`)
-//     console.log (`Email: ${email}`)
-//     console.log (`Department: ${department}`)
-//  }
-
-function addEmp() {
-submit.addEventListener('click', () => {    
-    console.log (`ID: ${empId}`)
-    console.log (`Name: ${name}`)
-    console.log (`Extension: ${ext}`)
-    console.log (`Email: ${email}`)
-    console.log (`Department: ${department}`)
-    })
-}
+submit.addEventListener('click', (event) => {    
+    console.log (`ID: ${empId.value}`)
+    console.log (`Name: ${name.value}`)
+    console.log (`Extension: ${ext.value}`)
+    console.log (`Email: ${email.value}`)
+    console.log (`Department: ${department.options[department.selectedIndex].text}`)
+    //event.preventDefault()
+})

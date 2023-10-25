@@ -17,7 +17,7 @@
 <body class="m-4">
     <div class="p-3 mb-2 bg-dark text-white" >
     <h1>Employee Management System</h1>
-    <form id="empForm" >
+    <form id="empForm" onsubmit="event.preventDefault()">
         8-Digit EmployeeID:<br>
         <input type="text" id="empId" maxlength="8"><br>
         Full Name:<br>
@@ -37,7 +37,7 @@
             <option value="6">Sales</option>
         </select><br>
     </div>
-        <button onclick="addEmp()" class="btn btn-success">Add Employee</button>
+       <button id="submit" class="btn btn-success">Add Employee</button>
         <output id="output"></output>
      
     </form>
